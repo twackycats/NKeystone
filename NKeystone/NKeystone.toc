@@ -1,0 +1,9 @@
+## Interface: 70000
+## Title: NKeystone
+## Notes: Display keystone information for members in guild.
+## Author: Bill (bill@fifteenb.com)
+## Version: 1.5
+
+## X-License: All Rights Reserved.
+
+NKeystone.lua
