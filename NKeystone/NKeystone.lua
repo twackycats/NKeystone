@@ -144,7 +144,8 @@ function HandleAddonMsg(msg)
 	-- First try to parse this as an itemlink
 	local _, newLink = GetItemInfo(msg);
 	if newLink ~= nil then
-		return newLink;
+		thisLink = filter(newLink);
+		return thisLink;
 	end
 
 	-- If that doesn't work then check for not completing anything
@@ -184,8 +185,7 @@ nkt.OnEvent = function(self, event, ...)
 				if dist == "WHISPER" then
 					parsedMsg = HandleAddonMsg(msg);
 					if parsedMsg ~= nil then
-						msg = filter(parsedMsg);
-						print("NK: " .. sender .. ": " .. msg);
+						print("NK: " .. sender .. ": " .. parsedMsg);
 					end
 				end
 			end
